@@ -10,7 +10,7 @@ export default function Container({
 }) {
   return (
     <div
-      className={` mx-auto max-w-4xl bg-white dark:bg-black  ${className}`}
+      className={` mx-auto max-w-4xl bg-background dark:bg-background  ${className}`}
       {...props}
     >
       {children}
