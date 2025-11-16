@@ -3,12 +3,29 @@ import { Metadata } from 'next'
 import React from 'react'
 import { promises as fs} from "fs"
 import path from "path"
-import { getSingleBlog } from '@/utils/mdx'
+import { getBlogFrontMatterBySlug, getSingleBlog } from '@/utils/mdx'
 import { redirect } from 'next/navigation'
 
-export const metadata: Metadata = {
-    title: "All blogs - saurabh garkoti",
-    description: "all my genral wisdom"
+
+
+export async function generateMetadata({params}: {params: Promise<{slug: string}>}){
+
+   const { slug } = await params;
+  const frontmatter = await getBlogFrontMatterBySlug(slug);
+
+ 
+  
+  
+  if(!frontmatter){
+    return{
+      title: "Blog not found",
+    }
+  }
+
+  return{
+    title: frontmatter.title + " - Saurabh Garkoti",
+    description: frontmatter.description
+  }
 }
 
 async function SingleBlogPage({
