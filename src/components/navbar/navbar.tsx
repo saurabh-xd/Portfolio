@@ -1,5 +1,5 @@
 "use client"
-import { motion, useMotionValue, useMotionValueEvent, useScroll } from 'motion/react'
+import { motion, useMotionValue, useMotionValueEvent, useScroll, useTransform } from 'motion/react'
 import Container from '../Container'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,6 +26,10 @@ function Navbar() {
 
   const [scrolled, setScrolled] = useState<boolean>(false);
 
+  const y = useTransform(scrollY, [0, 100], [0, 10]);
+  const width = useTransform(scrollY, [0,100], ["60%", "50%"]);
+
+
   useMotionValueEvent(scrollY, "change", (latest)=>{
    if(latest>20){
     setScrolled(true);
@@ -39,10 +43,10 @@ function Navbar() {
     <Container>
 
      <motion.nav
-     animate={{
+     style={{
         boxShadow: scrolled ? 'var(--shadow-acer)' : "none",
-      width: scrolled ? '50%' : '100%',
-      y: scrolled ? 10 : 0,
+     width,
+      y,
      }}
      transition={{
       duration: 0.3,
