@@ -52,6 +52,7 @@ console.log(frontmatter);
         <Container className='min-h-[200vh] px-10 md:pt-30 md:pb-10'>
             
             <div className='prose mx-auto'>
+           
             {content}
 
             </div>

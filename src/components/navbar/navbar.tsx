@@ -4,13 +4,13 @@ import Container from '../Container'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import { Button } from '../ui/button'
-import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
+import { Moon, Sun } from 'lucide-react'
+import { Button } from '../ui/button'
 
 function Navbar() {
 
-  const { theme, setTheme } = useTheme();
+   const { theme, setTheme } = useTheme();
 
    const navData = [
     { title: "About", href: "/about" },
@@ -49,14 +49,19 @@ function Navbar() {
       ease: "linear"
      }}
      
-     className='fixed inset-x-0 top-0 z-50 max-w-[885px]   mx-auto flex items-center justify-between rounded-full dark:bg-background bg-background py-2 px-3 '>
+     className='fixed inset-x-0 top-0 z-50 max-w-[885px] mx-auto flex items-center justify-between rounded-full bg-background py-2 px-3 '>
+
+      <Link href='/'>
       <Image
       className='h-15 w-15 rounded-full'
       src="/avatar.jpg" width="100" height="100" alt='avatar' />
 
-    
+    </Link>
 
-     <div className='flex items-center gap-2'>
+
+
+     <div className='flex items-center'>
+
 
  <Button
             variant="ghost"
@@ -78,7 +83,7 @@ function Navbar() {
          onMouseLeave={()=>setHovered(null)}
          >
 {   hovered === idx && (
-          <motion.span layoutId='hovered-span' className='h-full w-full absolute inset-0 rounded-md bg-neutral-100 dark:bg-neutral-800'></motion.span>
+          <motion.span layoutId='hovered-span' className='h-full w-full absolute inset-0 rounded-md bg-accent dark:'></motion.span>
             )}
        <span className='relative z-10'> {item.title}</span>
         </Link>

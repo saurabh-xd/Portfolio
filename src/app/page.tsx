@@ -10,6 +10,7 @@ export default function Home() {
 
       <Container className="min-h-[200vh] p-4 md:pt-20 md:pb-10 border-x border-dashed border-neutral-100">
        <About/>
+       <Projects/>
       </Container>
 
     </div>
