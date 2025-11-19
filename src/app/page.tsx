@@ -1,6 +1,7 @@
 import About from "@/components/about/About";
 import Container from "@/components/Container";
 import GithubGraph from "@/components/github/GithubGraph";
+import LandingBlog from "@/components/landing-blogs/landing-blog";
 import Projects from "@/components/projects/Projects";
 
 import Image from "next/image";
@@ -13,6 +14,7 @@ export default function Home() {
        <About/>
        <Projects/>
        <GithubGraph/>
+       <LandingBlog/>
       </Container>
 
     </div>
