@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/components/footer/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
 
 const inter = Inter({weight: ["400", "500", "600", "700", "800", "900"]});
@@ -31,7 +33,9 @@ export default function RootLayout({
           >
         <Navbar/>
         {children}
+        <Footer/>
         </ThemeProvider>
+          <Toaster />
       </body>
     </html>
  
