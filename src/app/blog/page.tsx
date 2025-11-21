@@ -1,5 +1,5 @@
 import Container from '@/components/Container'
-import { getBlogs } from '@/utils/mdx'
+import { getBlogs } from '@/lib/mdx'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import React from 'react'
@@ -20,8 +20,8 @@ async function BlogsPage() {
   }
   
   return (
-    <div className='min-h-screen flex items-start justify-start'>
-        <Container className='min-h-screen px-10 md:pt-30 md:pb-10'>
+    <div className='min-h-screen flex items-start justify-start pt-24'>
+        <Container >
             <h1 className='text-primary text-2xl font-bold tracking-tight md:text-4xl'>All blogs</h1>
             <p className='text-primary text-lg'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ea accusamus sit, sed commodi praesentium. Voluptas odio et earum totam!</p>
 

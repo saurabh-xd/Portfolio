@@ -1,9 +1,5 @@
 import Container from '@/components/Container'
-import { Metadata } from 'next'
-import React from 'react'
-import { promises as fs} from "fs"
-import path from "path"
-import { getBlogFrontMatterBySlug, getSingleBlog } from '@/utils/mdx'
+import { getBlogFrontMatterBySlug, getSingleBlog } from '@/lib/mdx'
 import { redirect } from 'next/navigation'
 import Image from 'next/image'
 
@@ -45,20 +41,22 @@ if(!blog){
 
 const { content, frontmatter} = blog
 
-console.log(frontmatter);
 
 
   return (
-    <div className='min-h-screen flex items-start justify-start'>
-        <Container className='min-h-[200vh] px-10 md:pt-30 md:pb-10'>
+    <div className='min-h-screen flex items-start justify-start pt-24'>
+        <Container className='py-20'>
 
-          <Image src={frontmatter.image} alt={frontmatter.title} width={100} height={100} className='max-h-96 w-full rounded-lg mx-auto mb-20 max-w-2xl shadow-xl'/>
+         <Image src={frontmatter.image} alt={frontmatter.title} width={800} height={400} className='w-full h-auto max-w-3xl rounded-lg mx-auto mb-12 shadow-2xl object-cover'/>
             
-            <div className='prose mx-auto'>
+            
+            
+                   <article className='prose prose-lg dark:prose-invert mx-auto max-w-3xl'>
+
            
             {content}
 
-            </div>
+            </article>
 
         </Container>
     </div>

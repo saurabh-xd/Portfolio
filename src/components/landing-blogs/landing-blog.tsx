@@ -1,4 +1,4 @@
-import { getBlogs } from '@/utils/mdx';
+import { getBlogs } from '@/lib/mdx';
 import Link from 'next/link';
 import React from 'react'
 import Container from '../Container';
