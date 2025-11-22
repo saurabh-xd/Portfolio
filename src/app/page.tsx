@@ -3,6 +3,7 @@ import Container from "@/components/Container";
 import GithubGraph from "@/components/github/GithubGraph";
 import LandingBlog from "@/components/landing-blogs/landing-blog";
 import Projects from "@/components/projects/Projects";
+import Skills from "@/components/skills/Skills";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
        <About/>
        <Projects/>
        <GithubGraph/>
+       <Skills/>
        <LandingBlog/>
       </Container>
 
