@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import React from 'react';
 
 export default function Container({
@@ -10,7 +11,7 @@ export default function Container({
 }) {
   return (
     <div
-      className={` mx-auto max-w-4xl bg-background dark:bg-background  ${className}`}
+      className={cn("mx-auto max-w-4xl", className)}
       {...props}
     >
       {children}
