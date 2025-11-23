@@ -13,7 +13,7 @@ function Navbar() {
    const { theme, setTheme } = useTheme();
 
    const navData = [
-    { title: "About", href: "/about" },
+    // { title: "About", href: "/about" },
     { title: "Projects", href: "/projects" },
     { title: "Blog", href: "/blog" },
     { title: "Contact", href: "/contact" },
@@ -53,11 +53,11 @@ function Navbar() {
       ease: "linear"
      }}
      
-     className='fixed inset-x-0 top-0 z-50 max-w-[885px] mx-auto flex items-center justify-between rounded-full bg-background py-2 px-3 '>
+     className='fixed inset-x-0 top-0 z-50 max-w-[885px] mx-auto flex items-center justify-between rounded-full bg-background/40 py-2 px-3 backdrop-blur-sm'>
 
       <Link href='/'>
       <Image
-      className='h-15 w-15 rounded-full'
+      className='size-16 rounded-full'
       src="/avatar.jpg" width="100" height="100" alt='avatar' />
 
     </Link>
@@ -82,12 +82,12 @@ function Navbar() {
 
         <Link 
         className='text-sm relative px-2 py-1'
-         href={item.href} key={idx}
+         href={item.href} key={item.href}
          onMouseEnter={()=> setHovered(idx)}
          onMouseLeave={()=>setHovered(null)}
          >
 {   hovered === idx && (
-          <motion.span layoutId='hovered-span' className='h-full w-full absolute inset-0 rounded-md bg-accent dark:'></motion.span>
+          <motion.span layoutId='hovered-span' className='h-full w-full absolute inset-0 rounded-md bg-accent '></motion.span>
             )}
        <span className='relative z-10'> {item.title}</span>
         </Link>

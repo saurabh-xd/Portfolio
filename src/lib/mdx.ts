@@ -12,7 +12,7 @@ type FrontMatter = {
 export const getSingleBlog = async (slug: string) => {
     try {
         const singleBlog = await fs.readFile(
-            path.join(process.cwd(), "src/data", `${slug}.mdx`),
+            path.join(process.cwd(), "src/data/blogs", `${slug}.mdx`),
             "utf-8",
         );
 
@@ -35,7 +35,7 @@ const {content, frontmatter} = await compileMDX<FrontMatter>({
 
 
 export const getBlogs = async () => {
-    const files = await fs.readdir(path.join(process.cwd(), 'src/data'));
+    const files = await fs.readdir(path.join(process.cwd(), 'src/data/blogs'));
 
     const allBlogs = await Promise.all(files.map(async file => {
         const slug = file.replace('.mdx', '');
@@ -54,7 +54,7 @@ export const getBlogs = async () => {
 
 export const getBlogFrontMatterBySlug = async (slug: string) => {
     const singleBlog = await fs.readFile(
-        path.join(process.cwd(), "src/data", `${slug}.mdx`),
+        path.join(process.cwd(), "src/data/blogs", `${slug}.mdx`),
         "utf-8"
     );
 

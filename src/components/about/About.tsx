@@ -1,34 +1,12 @@
 import React from 'react'
 import Container from '../Container'
-import { Mail, Circle } from "lucide-react";
+import { Circle } from "lucide-react";
 import { Separator } from '../ui/separator'
 import Link from 'next/link'
-import { XIcon } from '../icons/Xicon';
-import { GithubIcon } from '../icons/GithubIcon';
-import { LinkedInIcon } from '../icons/Linkedin';
+import { socialLinks } from '@/data/social';
 
-export const socialLinks = [
-  {
-    name: "Twitter",
-    href: "https://x.com/_saurabh__xd",
-    icon: XIcon,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/saurabh-garkoti-784191322/", 
-    icon: LinkedInIcon,
-  },
-  {
-    name: "GitHub",
-    href: "https://github.com/saurabh-xd",
-    icon: GithubIcon,
-  },
-  {
-    name: "Email",
-    href: "mailto:saurabhgarkotiii@gmail.com", 
-    icon: Mail,
-  },
-];
+
+
 
 function About() {
   return (
