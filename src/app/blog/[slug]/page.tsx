@@ -1,4 +1,4 @@
-import Container from '@/components/Container'
+import Container from '@/components/common/Container'
 import { getBlogFrontMatterBySlug, getSingleBlog } from '@/lib/mdx'
 import { redirect } from 'next/navigation'
 import Image from 'next/image'

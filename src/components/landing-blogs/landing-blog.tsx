@@ -1,7 +1,7 @@
 import { getBlogs } from '@/lib/mdx';
 import Link from 'next/link';
 import React from 'react'
-import Container from '../Container';
+import Container from '../common/Container';
 
 async function LandingBlog() {
      const allBlogs = await getBlogs();
@@ -12,7 +12,7 @@ async function LandingBlog() {
       }
   return (
     
-<Container className='mt-20'>
+<Container >
 
 
 
@@ -33,7 +33,7 @@ async function LandingBlog() {
 
                       </div>
                     <p className=' max-w-lg pt-2 text-neutral-500 text-sm md:text-sm'>
-                      {truncate( blog.description || "", 150)}
+                      {truncate( blog.description || "", 120)}
                     </p>
                   
                   </Link>

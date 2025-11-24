@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image';
 import { Globe } from 'lucide-react';
 import Link from 'next/link';
-import Container from '../Container';
+import Container from '../common/Container';
 import { GithubIcon } from '../icons/GithubIcon';
 import ProjectCard from './ProjectCard';
 
@@ -17,13 +17,13 @@ import { projects } from '@/data/project';
 
 function Projects() {
   return (
-   <section className='py-16'>
+   <section className='py-18'>
 
     <Container>
    
-      <div className=' max-w-md mx-auto py-2 flex flex-col items-center justify-center gap-2  rounded-md mb-8 '>
+      <div className='  mb-6 '>
         <h2 className='text-4xl font-bold '>Projects</h2>
-        <p className='text-lg font-semibold text-neutral-400'>Things I’ve Shipped & Cooked</p>
+       
       </div>
 
 

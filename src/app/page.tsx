@@ -1,5 +1,5 @@
 import About from "@/components/about/About";
-import Container from "@/components/Container";
+import Container from "@/components/common/Container";
 import GithubGraph from "@/components/github/GithubGraph";
 import LandingBlog from "@/components/landing-blogs/landing-blog";
 import Projects from "@/components/projects/Projects";

@@ -7,9 +7,9 @@ function Skills() {
   return (
     <section className='my-14'>
        
-            <h2 className='text-3xl  font-semibold'>Skills & Tools</h2>
+            <h2 className='text-4xl  font-semibold'>Skills & Tools</h2>
 
-          <div className='flex flex-col gap-6 mt-6'>
+          <div className='flex flex-col gap-4 mt-6'>
             {
               skillCategories.map((category,idx)=>(
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '../Container'
+import Container from '../common/Container'
 import Link from 'next/link'
 import { XIcon } from '../icons/Xicon'
 import { LinkedInIcon } from '../icons/Linkedin'

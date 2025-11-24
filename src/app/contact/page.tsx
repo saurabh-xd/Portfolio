@@ -1,5 +1,6 @@
-import Container from '@/components/Container'
-import Contactform from '@/components/contact-form'
+import Contactform from '@/components/contact/contact-form'
+import Container from '@/components/common/Container'
+
 import React from 'react'
 
 function page() {

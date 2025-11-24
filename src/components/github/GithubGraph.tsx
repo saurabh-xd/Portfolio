@@ -1,6 +1,6 @@
 import React from "react";
 import { GitHubCalendar } from "react-github-calendar";
-import Container from "../Container";
+import Container from "../common/Container";
 import Link from "next/link";
 
 function GithubGraph() {
@@ -13,7 +13,7 @@ function GithubGraph() {
           </h2>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center p-6 border border-border">
           <Link href="https://github.com/saurabh-xd" target="_blank">
             <GitHubCalendar
               username="saurabh-xd"

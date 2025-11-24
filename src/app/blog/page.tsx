@@ -1,4 +1,4 @@
-import Container from '@/components/Container'
+import Container from '@/components/common/Container'
 import { getBlogs } from '@/lib/mdx'
 import { Metadata } from 'next'
 import Link from 'next/link'
@@ -25,7 +25,7 @@ async function BlogsPage() {
             <h1 className='text-primary text-2xl font-bold tracking-tight md:text-4xl'>All blogs</h1>
             <p className='text-primary text-lg'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ea accusamus sit, sed commodi praesentium. Voluptas odio et earum totam!</p>
 
-            <div className='flex flex-col gap-4 py-10'>
+            <div className='flex flex-col gap-8 py-10'>
                {
                 allBlogs.map((blog,idx)=>(
                   <Link key={blog.title} href={`/blog/${blog.slug}`}>

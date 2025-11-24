@@ -1,6 +1,6 @@
 "use client"
 import { motion, useMotionValue, useMotionValueEvent, useScroll, useTransform } from 'motion/react'
-import Container from '../Container'
+import Container from '../common/Container'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
