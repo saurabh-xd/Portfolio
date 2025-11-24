@@ -3,7 +3,7 @@ import { motion, useMotionValue, useMotionValueEvent, useScroll, useTransform } 
 import Container from '../common/Container'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { Moon, Sun } from 'lucide-react'
 import { Button } from '../ui/button'
@@ -19,6 +19,12 @@ function Navbar() {
     { title: "Contact", href: "/contact" },
   ];
 
+  const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+  setIsMobile(window.innerWidth < 768);
+}, []);
+
 
   const [hovered, setHovered] = useState<number | null>(null);
 
@@ -27,7 +33,9 @@ function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   const y = useTransform(scrollY, [0, 100], [0, 10]);
-  const width = useTransform(scrollY, [0,100], ["60%", "50%"]);
+  const width = useTransform(scrollY,
+     [0,100],
+     isMobile ? ["100%", "80%"] : ["60%", "50%"]);
 
 
   useMotionValueEvent(scrollY, "change", (latest)=>{
@@ -53,11 +61,11 @@ function Navbar() {
       ease: "linear"
      }}
      
-     className='fixed inset-x-0 top-0 z-50 max-w-[885px] mx-auto flex items-center justify-between rounded-full bg-background/40 py-2 px-3 backdrop-blur-sm'>
+     className='fixed inset-x-0 top-0 z-50 max-w-full md:max-w-[885px] mx-auto flex items-center justify-between rounded-full bg-background/40 md:py-2 py-1 md:px-3 px-2 backdrop-blur-sm'>
 
-      <Link href='/'>
+      <Link href='/' >
       <Image
-      className='size-16 rounded-full'
+      className='md:size-16 size-10 rounded-full object-cover'
       src="/avatar.jpg" width="100" height="100" alt='avatar' />
 
     </Link>
@@ -70,7 +78,7 @@ function Navbar() {
  <Button
             variant="ghost"
             size="icon"
-            className="rounded-3xl cursor-pointer hover:text-foreground"
+            className="rounded-3xl cursor-pointer hover:text-foreground "
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
@@ -81,7 +89,7 @@ function Navbar() {
       {navData.map((item,idx)=>(
 
         <Link 
-        className='text-sm relative px-2 py-1'
+        className='md:text-sm text-xs relative px-2 py-1'
          href={item.href} key={item.href}
          onMouseEnter={()=> setHovered(idx)}
          onMouseLeave={()=>setHovered(null)}
