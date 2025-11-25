@@ -9,11 +9,13 @@ function GithubGraph() {
       <Container>
         <div className="flex items-center justify-center mb-8">
           <h2 className="text-3xl font-semibold tracking-tight">
-            GitHub Activity{" "}
+            GitHub Activity
           </h2>
         </div>
 
-        <div className="flex justify-center items-center p-6 border border-border">
+        {/* <div className="flex justify-center items-center p-6 border border-border"> */}
+         <div className="w-full overflow-x-auto">
+          <div className="min-w-max mx-auto p-6 border border-border">
           <Link href="https://github.com/saurabh-xd" target="_blank">
             <GitHubCalendar
               username="saurabh-xd"
@@ -25,6 +27,7 @@ function GithubGraph() {
               }}
             />
           </Link>
+        </div>
         </div>
       </Container>
     </section>

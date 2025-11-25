@@ -16,7 +16,7 @@ function Skills() {
                 <div key={category.title} className='flex flex-col gap-1'>
                   <h2 className='text-lg text-foreground/80 font-medium'>{category.title}</h2>
 
-                  <div className='flex gap-6'>
+                  <div className='flex flex-wrap gap-6'>
                     {category.skills.map((skill,idx)=>(
 
 

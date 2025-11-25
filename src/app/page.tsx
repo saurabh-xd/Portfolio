@@ -7,9 +7,9 @@ import Skills from "@/components/skills/Skills";
 
 export default function Home() {
   return (
-    <div className="min-h-screen ">
+   
 
-      <Container className=" p-4 md:pt-20 md:pb-10 border-x border-dashed border-border">
+      <Container className=" p-4 md:pt-20 md:pb-10  min-h-screen">
        <About/>
        <Projects/>
        <GithubGraph/>
@@ -17,6 +17,6 @@ export default function Home() {
        <LandingBlog/>
       </Container>
 
-    </div>
+   
   );
 }
