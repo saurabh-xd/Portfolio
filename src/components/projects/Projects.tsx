@@ -22,12 +22,12 @@ function Projects() {
     <Container>
    
       <div className='  mb-6 '>
-        <h2 className='text-4xl font-bold '>Projects</h2>
+        <h2 className='text-2xl md:text-4xl font-bold '>Projects</h2>
        
       </div>
 
 
-      <div className='grid grid-cols-2 gap-6'>
+      <div className='grid md:grid-cols-2 grid-cols-1 gap-10'>
 
         {
           projects.map((project,idx)=>(

@@ -53,7 +53,7 @@ function About() {
 
       <div className='mt-4 flex justify-start gap-4'>
 
-<Link href="/cal.com">
+<Link href="https://cal.com">
        <Button variant="outline">
         <CalendarClock />
         Book a meet
@@ -72,7 +72,7 @@ function About() {
         <Separator className='my-6' />
 
         {/* Social Links */}
-        <div className='flex flex-wrap items-center gap-4 md:gap-6 mt-4'>
+        <div className='flex flex-wrap  items-center gap-4 md:gap-6 mt-4'>
           {socialLinks.map((link) => (
             <Link 
               key={link.name} 
@@ -82,8 +82,8 @@ function About() {
               className='flex items-center  gap-2 text-foreground/70 hover:text-foreground transition-colors group'
               aria-label={`Visit my ${link.name} profile`}
             >
-              <link.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              <span className='text-sm font-medium'>{link.name}</span>
+              <link.icon className="md:size-5 size-4  group-hover:scale-110 transition-transform" />
+              <span className='md:text-sm text-xs font-medium'>{link.name}</span>
             </Link>
           ))}
         </div>
