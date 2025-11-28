@@ -116,7 +116,7 @@ const Contactform = () => {
               <FormControl>
                 <Input placeholder="Your name" {...field} 
                 disabled={isSubmitting}
-                className="h-16 px-3 placeholder:text-base"
+                className="md:h-16 h-12 px-3 md:placeholder:text-base text-sm"
                 />
               </FormControl>
             
@@ -134,7 +134,7 @@ const Contactform = () => {
               <FormLabel className="text-sm font-medium">Email</FormLabel>
               <FormControl>
                 <Input type="email" placeholder="email@example.com" {...field}
-                className="h-16 px-3 placeholder:text-base"
+                className="md:h-16 h-12 px-3 md:placeholder:text-base text-sm"
                 disabled={isSubmitting} />
               </FormControl>
              
@@ -152,7 +152,7 @@ const Contactform = () => {
               <FormLabel className="text-sm font-medium">Phone </FormLabel>
               <FormControl>
                 <Input type="tel" placeholder="phone" {...field} 
-                className="h-16 px-3 placeholder:text-base"
+                className="md:h-16 h-12 px-3 md:placeholder:text-base text-sm"
                 disabled={isSubmitting}/>
               </FormControl>
             
@@ -169,7 +169,7 @@ const Contactform = () => {
               <FormLabel  className="text-sm font-medium">Interested in</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isSubmitting}  >
               <FormControl>
-                 <SelectTrigger className="w-full px-3 text-base" style={{ height: '64px', minHeight: '64px' }}>
+                 <SelectTrigger className="w-full md:h-16 h-12 px-3 md:text-base text-sm " >
             <SelectValue placeholder="Select a subject " />
           </SelectTrigger>
               </FormControl>
@@ -218,7 +218,7 @@ const Contactform = () => {
               <FormLabel className="text-sm font-medium">Message</FormLabel>
               <FormControl>
                 <Textarea placeholder="Type your message here." id="message" 
-                className="min-h-40 resize-none placeholder:text-base pt-2"
+                className="md:min-h-40 min-h-30 resize-none md:placeholder:text-base text-sm pt-2"
                 disabled={isSubmitting} {...field}/>
               </FormControl>
             
