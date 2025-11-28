@@ -34,16 +34,16 @@ function About() {
         {/* Bio Section */}
         <div className='mt-4 '>
           <p className='text-muted-foreground leading-relaxed text-base md:text-lg'>
-            I'm a <span className='text-foreground font-medium'>full-stack developer</span> who loves coding, tech, and science. 
+            I'm a <span className='text-foreground/80 font-medium'>full-stack developer</span> who loves coding, tech, and science. 
             I build clean, modern applications using{' '}
-            <span className='text-foreground font-medium'>TypeScript, React, Next.js, Node.js,</span> and{' '}
-            <span className='text-foreground font-medium'>Express.js.</span>
+            <span className='text-foreground/80 font-medium'>TypeScript, React, Next.js, Node.js,</span> and{' '}
+            <span className='text-foreground/80 font-medium'>Express.js.</span>
             
           </p>
 
            <p className='text-muted-foreground mt-4 text-base md:text-lg'>
-           I'm Open to <span className='text-foreground font-medium'>freelance projects , collaborations</span>, and 
-            <span className='text-foreground font-medium'> full-time opportunities</span>.
+           I'm Open to <span className='text-foreground/80 font-medium'>freelance projects , collaborations</span>, and 
+            <span className='text-foreground/80 font-medium'> full-time opportunities</span>.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ function About() {
         <Separator className='my-6' />
 
         {/* Social Links */}
-        <div className='flex flex-wrap  items-center gap-4 md:gap-6 mt-4'>
+        <div className='flex flex-wrap  items-center md:justify-start justify-center gap-4 md:gap-6 mt-4'>
           {socialLinks.map((link) => (
             <Link 
               key={link.name} 

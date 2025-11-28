@@ -7,7 +7,7 @@ import { GithubIcon } from '../icons/GithubIcon'
 
 function Footer() {
   return (
-    <Container className='flex justify-between   p-3'>
+    <Container className='flex justify-between   p-3 border-t border-border '>
     
     <p className='text-xs text-neutral-500'>Built with love by Saurabh</p>
     <div className='flex items-center justify-center gap-4'>

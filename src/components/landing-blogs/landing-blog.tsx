@@ -16,8 +16,8 @@ async function LandingBlog() {
 
 
 
-    <h2 className='text-4xl font-semibold'>Blogs</h2>
-         <div className='flex flex-col gap-6 py-10'>
+    <h2 className='text-2xl md:text-4xl font-semibold'>Blogs</h2>
+         <div className='flex flex-col gap-6 py-6'>
                {
                 allBlogs.map((blog,idx)=>(
                   <Link key={blog.title} href={`/blog/${blog.slug}`}>
@@ -27,8 +27,8 @@ async function LandingBlog() {
                       {blog.title}
                     </h2>
 
-                    <p className=' text-sm text-neutral-500'>{new Date(blog.date || "").toLocaleDateString('en-us', {
-                      weekday: "long", year:"numeric", month:"short", day:"numeric"
+                    <p className=' md:text-sm text-sm text-neutral-500 '>{new Date(blog.date || "").toLocaleDateString('en-us', {
+                     year:"numeric", month:"short", day:"numeric"
                     })}</p>
 
                       </div>
