@@ -66,7 +66,7 @@ useEffect(() => {
       <Link href='/' >
       <Image
       className='md:size-16 size-10 rounded-full object-cover'
-      src="/avatar.jpg" width="100" height="100" alt='avatar' />
+      src="/avatar.jpg"  width="100" height="100" alt='avatar' />
 
     </Link>
 
@@ -75,16 +75,7 @@ useEffect(() => {
      <div className='flex items-center'>
 
 
- <Button
-            variant="ghost"
-            size="icon"
-            className="rounded-3xl cursor-pointer hover:text-foreground "
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          >
-            <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-            <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-            <span className="sr-only">Toggle theme</span>
-          </Button>
+
 
       {navData.map((item,idx)=>(
 
@@ -100,6 +91,17 @@ useEffect(() => {
        <span className='relative z-10'> {item.title}</span>
         </Link>
       ))}
+
+       <Button
+            variant="ghost"
+            size="icon"
+            className="rounded-3xl cursor-pointer hover:text-foreground "
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          >
+            <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+            <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+            <span className="sr-only">Toggle theme</span>
+          </Button>
 
      </div>
 
