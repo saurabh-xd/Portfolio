@@ -1,8 +1,9 @@
 import Container from '@/components/common/Container'
 import { getBlogs } from '@/lib/mdx'
+import { ArrowRight, CalendarDays } from 'lucide-react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import React from 'react'
+
 
 
 export const metadata: Metadata = {
@@ -18,32 +19,52 @@ async function BlogsPage() {
   const truncate = (str: string, length: number) => {
     return str.length > length ? str.substring(0, length) + "..." : str;
   }
+
+  const formatDate = (dateString: string)=>{
+    return new Date(dateString).toLocaleString('en-us', {
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    })
+  };
   
   return (
-    <div className='min-h-screen flex items-start justify-start pt-24'>
+    <div className='min-h-screen  py-24'>
         <Container >
-            <h1 className='text-primary text-2xl font-bold tracking-tight md:text-4xl'>All blogs</h1>
-            <p className='text-primary text-lg'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ea accusamus sit, sed commodi praesentium. Voluptas odio et earum totam!</p>
 
-            <div className='flex flex-col gap-8 py-10'>
+          <div className='space-y-3 mb-12 text-center'>
+            <h1 className='text-primary text-4xl font-bold tracking-tight md:text-5xl'> Blogs</h1>
+           
+
+          </div>
+            
+
+            <div className='space-y-8'>
                {
                 allBlogs.map((blog,idx)=>(
-                  <Link key={blog.title} href={`/blog/${blog.slug}`}>
+                  <Link 
+                  key={blog.title}
+                  href={`/blog/${blog.slug}`}
+                   className='block group' >
 
-                    <div className='flex items-center justify-between'>
-                    <h2 className='text-primary text-base font-bold tracking-tight '>
-                      {blog.title}
-                    </h2>
-
-                    <p className=' text-sm '>{new Date(blog.date || "").toLocaleDateString('en-us', {
-                      weekday: "long", year:"numeric", month:"short", day:"numeric"
-                    })}</p>
-
-                      </div>
-                    <p className=' max-w-lg pt-2 text-sm md:text-sm'>
-                      {truncate( blog.description || "", 150)}
-                    </p>
-                  
+                     <article className='p-6 rounded-lg border border-primary/10 hover:border-primary/20  transition-all duration-200'>
+                        <div className='flex items-start justify-between gap-4 mb-3'>
+                            <h2 className='text-xl md:text-2xl font-semibold tracking-tight text-primary group-hover:text-primary/80 transition-colors'>
+                                {blog.title}
+                            </h2>
+                            <time className='text-sm text-primary/60 whitespace-nowrap mt-1 flex items-center justify-center gap-2'>
+                              <CalendarDays className='size-4' />   {formatDate(blog.date || "")} 
+                            </time>
+                        </div>
+                        
+                        <p className='text-primary/70 leading-relaxed'>
+                            {truncate(blog.description || "", 180)}
+                        </p>
+                        
+                        <span className=' mt-4 text-sm font-medium text-primary/60 group-hover:text-primary transition-colors flex items-center  gap-1'>
+                            Read more <ArrowRight className='size-4' />
+                        </span>
+                    </article>
                   </Link>
                 ))
                }
