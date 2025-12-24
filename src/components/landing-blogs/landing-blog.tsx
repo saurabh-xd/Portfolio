@@ -2,6 +2,7 @@ import { getBlogs } from '@/lib/mdx';
 import Link from 'next/link';
 import React from 'react'
 import Container from '../common/Container';
+import { Button } from '../ui/button';
 
 async function LandingBlog() {
      const allBlogs = await getBlogs();
@@ -40,6 +41,12 @@ async function LandingBlog() {
                 ))
                }
             </div>
+
+            <div className="mt-8 flex justify-center">
+        <Button variant="outline">
+          <Link href="/blog">Show all blogs</Link>
+        </Button>
+      </div>
 
           
 

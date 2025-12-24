@@ -7,9 +7,9 @@ import { GithubIcon } from '../icons/GithubIcon'
 
 function Footer() {
   return (
-    <Container className='flex justify-between   p-3 border-t border-border '>
+    <Container className='flex justify-between   py-6 border-t border-border '>
     
-    <p className='text-xs text-neutral-500'>Built with love by Saurabh</p>
+    <p className='text-xs text-neutral-500'>Designed & Developed by <span className="font-medium text-neutral-400/90">Saurabh.</span></p>
     <div className='flex items-center justify-center gap-4'>
         <Link href="https://x.com/_saurabh__xd">
         <XIcon className='size-4 text-neutral-500 hover:text-neutral-200'/>
