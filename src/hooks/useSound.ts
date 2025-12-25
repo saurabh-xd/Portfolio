@@ -1,26 +1,5 @@
 import { useCallback, useEffect, useRef } from "react";
 
-/**
- * Custom React hook to load and play a sound from a given URL using the Web Audio API.
- *
- * This hook fetches the audio file at the specified URL, decodes it, and prepares it for playback.
- * It returns a `play` function that can be called to play the loaded sound.
- *
- * @param url - The URL of the audio file to load and play.
- * @returns A function that, when called, plays the loaded sound.
- *
- * @remarks
- * - If the Web Audio API is not supported in the browser, a warning is logged and playback is disabled.
- * - The audio context and buffer are managed internally using React refs.
- * - Errors during fetching or decoding the audio are logged to the console.
- *
- * @example
- * ```tsx
- * const playClick = useSound('/sounds/click.mp3');
- * // Later in an event handler:
- * playClick();
- * ```
- */
 export function useSound(url: string) {
   const audioCtxRef = useRef<AudioContext | null>(null);
   const bufferRef = useRef<AudioBuffer | null>(null);
