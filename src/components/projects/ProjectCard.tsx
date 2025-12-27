@@ -34,10 +34,10 @@ interface ProjectCardProps {
 
 function ProjectCard({ project, index }: ProjectCardProps ) {
   return (
-    <Card className='overflow-hidden hover:shadow-lg border  transition-all  group pt-0 rounded-none bg-background '>
+    <Card className='overflow-hidden hover:shadow-lg border transition-all group pt-0 rounded-sm '>
 
       {/* Card Header - Fixed image sizing */}
-      <CardHeader className="p-0 ">
+      <CardHeader className="p-0">
         <motion.div
         initial={{opacity: 0, filter: "blur(10px)", y: 10}}
         whileInView={{opacity: 1, filter: "blur(0px)", y: 0}}
@@ -46,8 +46,9 @@ function ProjectCard({ project, index }: ProjectCardProps ) {
           delay: index * 0.1,
           ease: "easeInOut"
         }}
+        viewport={{once: true}}
 
-        className='relative w-full md:h-60  h-45  overflow-hidden '>
+        className='relative w-full md:h-60 h-48 overflow-hidden '>
           <Image 
             src={project.image} 
             alt={`${project.name} screenshot`}
@@ -66,79 +67,20 @@ function ProjectCard({ project, index }: ProjectCardProps ) {
         <div className='flex justify-between items-start mb-3'>
           <h3 className='text-xl font-semibold'>{project.name}</h3>
 
-
-          {/* Links */}
-          <div className='flex gap-3 items-center'>
-
-            <Tooltip>
-              <TooltipTrigger>
-            <Link 
-              href={project.live}
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label={`View ${project.name} live demo`}
-              className='text-neutral-400 hover:text-primary transition-colors'
-            >
-              {/* <Globe className='w-5 h-5' /> */}
-              <Live    />
-            </Link>
-            </TooltipTrigger>
-             <TooltipContent>
-        <p className="font-bold">Live Preview</p>
-      </TooltipContent>
-            </Tooltip>
-
-
-            <Tooltip>
-            <TooltipTrigger>
-            <Link 
-              href={project.github}
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label={`View ${project.name} on GitHub`}
-              className='text-neutral-400 hover:text-primary transition-colors'
-            >
-              <GithubIcon className='w-5 h-5' />
-            </Link>
-              </TooltipTrigger>
-             <TooltipContent>
-        <p className="font-bold">Github</p>
-      </TooltipContent>
-            </Tooltip>
-
-
+{project.completedOn && (
+          <div className="text-xs text-foreground/80 flex md:flex-row flex-col md:gap-1">
+            <span>Updated:</span>
+            <span className="font-medium text-muted-foreground">{project.completedOn}</span>
           </div>
+        )}
+       
         </div>
 
        
 
         <p className='text-muted-foreground text-sm'>{project.description}</p>
 
-<div className="flex justify-between items-center">
- {/* Tags */}
-        {project.tags && (
-          <div className="flex gap-2 flex-wrap">
-               {
-                project.tags.map((tag,idx)=>(
-                  <span
-                   key={idx}
-                className="bg-secondary text-secondary-foreground text-xs px-2 py-1 rounded-md border border-dashed ">
-                    {tag}
-                  </span>
-                ))
-               }
-          </div>
-        )}
 
-{/* Completion Date */}
-        {project.completedOn && (
-          <div className="text-xs  text-foreground/80 flex md:flex-row flex-col md:gap-1">
-            <span>Last updated:  </span>
-            <span className="font-medium  text-muted-foreground ">{project.completedOn}</span>
-          </div>
-        )}
-
-        </div>
 
         
 
@@ -147,24 +89,74 @@ function ProjectCard({ project, index }: ProjectCardProps ) {
       
 
       {/* Card Footer - Tech Stack */}
-      <CardFooter className=' flex flex-col items-start gap-2 '>
-       <h2 className="text-xs text-foreground/80 uppercase tracking-wide">Tech-stack</h2>
+      <CardFooter className='flex items-start flex-col p-4 pt-0'>
 
-        <div className="flex gap-3">
+     <h2 className="text-xs text-foreground/80 uppercase tracking-wide mb-2">Tech-stack</h2>
+        <div className="flex justify-between w-full">
+  
+    <div className="flex gap-3">
         {project.tech.map((tech, techIdx) => (
-          <Tooltip key={techIdx} >
-            <TooltipTrigger>
-           <div className="size-6 hover:scale-120 transition-all duration-300 hover:cursor-pointer">
-            {tech.icon}
+          <Tooltip key={techIdx}>
+        <TooltipTrigger>
+           <div className="size-6 hover:scale-110 transition-all duration-300 hover:cursor-pointer">
+        {tech.icon}
           </div>
-              </TooltipTrigger>
-             <TooltipContent>
+          </TooltipTrigger>
+         <TooltipContent>
         <p className="font-bold">{tech.name}</p>
       </TooltipContent>
-            </Tooltip>
+        </Tooltip>
         ))}
 
         </div>
+
+        {/* Links */}
+          <div className='flex gap-3 items-center'>
+
+        <Tooltip>
+          <TooltipTrigger>
+        <Link 
+          href={project.live}
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label={`View ${project.name} live demo`}
+          className='text-neutral-400 hover:text-primary transition-colors'
+        >
+          {/* <Globe className='w-5 h-5' /> */}
+          <Live />
+        </Link>
+        </TooltipTrigger>
+         <TooltipContent>
+        <p className="font-bold">Live Preview</p>
+      </TooltipContent>
+        </Tooltip>
+
+
+        <Tooltip>
+        <TooltipTrigger>
+        <Link 
+          href={project.github}
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label={`View ${project.name} on GitHub`}
+          className='text-neutral-400 hover:text-primary transition-colors'
+        >
+          <GithubIcon className='w-5 h-5' />
+        </Link>
+          </TooltipTrigger>
+         <TooltipContent>
+        <p className="font-bold">Github</p>
+      </TooltipContent>
+        </Tooltip>
+
+
+          </div>
+
+        </div>
+
+        
+
+           
           
        
       </CardFooter>
