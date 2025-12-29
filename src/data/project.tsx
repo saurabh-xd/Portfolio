@@ -27,31 +27,32 @@ export interface Project {
 }
 
 export const projects = [
+ 
   {
-    name: "ChatBot",
+    name: "TypeZen",
     description:
-      "A simple AI chatbot built using JavaScript and the Gemini API.",
-    image: "/projects/chatbot.png",
-    github: "https://github.com/saurabh-xd/chatbot",
-    live: "https://chatbot-saurabh.vercel.app",
-    completedOn: "June 2024",
-    tags: ["AI", "Frontend"],
+      "A modern and fully responsive landing page built with Next.js, Tailwind CSS, and Motion animations.",
+    image: "/projects/landing.jpg",
+    github: "https://github.com/saurabh-xd/typezen",
+    live: "https://typezen-tau.vercel.app/",
+    completedOn: "August 2024",
+    tags: [ "Frontend", "Landing Page"],
     tech: [
-      { name: "Node.js", icon: <NodeJs /> },
-      { name: "Express.js", icon: <ExpressJs /> },
+      { name: "Next.js", icon: <NextJs /> },
       { name: "React", icon: <ReactIcon /> },
-      { name: "Mongodb", icon: <MongoDB /> },
-      { name: "Javascript", icon: <JavaScript/> },
+       { name: "Typescript", icon: <TypeScript /> },
+      { name: "Tailwind CSS", icon: <TailwindCss /> },
     ],
+    completed: true,
   },
 
   {
     name: "ChatMate",
     description:
       "A real-time chat application built using MERN stack and WebSockets.",
-    image: "/projects/chatmate.png",
+    image: "/projects/chatmate.jpg",
     github: "https://github.com/saurabh-xd/chatmate",
-    live: "https://chatmate-app.vercel.app",
+    live: "https://chat-app-rho-jet.vercel.app",
     completedOn: "April 2024",
     tags: ["Real-time", "Full Stack"],
     tech: [
@@ -62,30 +63,34 @@ export const projects = [
       { name: "Tailwind CSS", icon: <TailwindCss /> },
       { name: "Socket.IO", icon: <SocketIo /> },
     ],
+    completed: true,
   },
 
-  {
-    name: "TypeZen",
+  
+
+   {
+    name: "LearnMusic",
     description:
-      "A modern landing page built using Next.js, Tailwind CSS, and Framer Motion. ",
-    image: "/projects/landing.png",
-    github: "https://github.com/saurabh-xd/typezen",
-    live: "https://typezen.vercel.app",
-    completedOn: "August 2024",
-    tags: [ "Frontend", "Landing Page"],
-    tech: [
+      "A modern music course landing page built with Next.js, TypeScript, Tailwind CSS, and Aceternity UI",
+    image: "/projects/chatbot.jpg",
+    github: "https://github.com/saurabh-xd/LearnMusic",
+    live: "https://learn-music-school.vercel.app/",
+    completedOn: "June 2024",
+    tags: ["Landing page", "Frontend"],
+     tech: [
       { name: "Next.js", icon: <NextJs /> },
       { name: "React", icon: <ReactIcon /> },
        { name: "Typescript", icon: <TypeScript /> },
       { name: "Tailwind CSS", icon: <TailwindCss /> },
     ],
+    completed: true,
   },
 
   {
     name: "ProjectFolio",
     description:
       "A platform where developers can upload their projects, explore others' work, and leave reviews. ",
-    image: "/projects/projectfolio.png",
+    image: "/projects/projectfolio.jpg",
     github: "https://github.com/saurabh-xd/projectfolio",
     live: "https://projectfolio.vercel.app",
     completedOn: "October 2024",
@@ -98,5 +103,6 @@ export const projects = [
       { name: "Mongodb", icon: <MongoDB /> },
       { name: "Shadcn", icon: <Shadcn /> },
     ],
+    completed: false,
   },
 ];
