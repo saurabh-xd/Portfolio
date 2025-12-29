@@ -25,6 +25,7 @@ interface Project {
   tech: { name: string; icon: React.ReactNode }[];
    tags?: string[];
   completedOn?: string;
+  completed: boolean;
 }
 
 interface ProjectCardProps {
@@ -34,7 +35,7 @@ interface ProjectCardProps {
 
 function ProjectCard({ project, index }: ProjectCardProps ) {
   return (
-    <Card className='overflow-hidden hover:shadow-lg border transition-all group pt-0 rounded-sm '>
+    <Card className='overflow-hidden hover:shadow-lg border transition-all group pt-0 pb-4 rounded-xl bg-background '>
 
       {/* Card Header - Fixed image sizing */}
       <CardHeader className="p-0">
@@ -67,51 +68,9 @@ function ProjectCard({ project, index }: ProjectCardProps ) {
         <div className='flex justify-between items-start mb-3'>
           <h3 className='text-xl font-semibold'>{project.name}</h3>
 
-{project.completedOn && (
-          <div className="text-xs text-foreground/80 flex md:flex-row flex-col md:gap-1">
-            <span>Updated:</span>
-            <span className="font-medium text-muted-foreground">{project.completedOn}</span>
-          </div>
-        )}
-       
-        </div>
+{/* Links */}
 
-       
-
-        <p className='text-muted-foreground text-sm'>{project.description}</p>
-
-
-
-        
-
-      </CardContent>
-
-      
-
-      {/* Card Footer - Tech Stack */}
-      <CardFooter className='flex items-start flex-col p-4 pt-0'>
-
-     <h2 className="text-xs text-foreground/80 uppercase tracking-wide mb-2">Tech-stack</h2>
-        <div className="flex justify-between w-full">
-  
-    <div className="flex gap-3">
-        {project.tech.map((tech, techIdx) => (
-          <Tooltip key={techIdx}>
-        <TooltipTrigger>
-           <div className="size-6 hover:scale-110 transition-all duration-300 hover:cursor-pointer">
-        {tech.icon}
-          </div>
-          </TooltipTrigger>
-         <TooltipContent>
-        <p className="font-bold">{tech.name}</p>
-      </TooltipContent>
-        </Tooltip>
-        ))}
-
-        </div>
-
-        {/* Links */}
-          <div className='flex gap-3 items-center'>
+{project.completed   && (      <div className='flex gap-3 items-center'>
 
         <Tooltip>
           <TooltipTrigger>
@@ -150,6 +109,69 @@ function ProjectCard({ project, index }: ProjectCardProps ) {
         </Tooltip>
 
 
+          </div>
+)
+}
+       
+        </div>
+
+        
+
+       
+
+        <p className='text-muted-foreground text-sm'>{project.completed
+          ? project.description : 
+          "This project is currently under development. Details coming soon."}</p>
+
+
+
+        
+
+      </CardContent>
+
+      
+
+      {/* Card Footer - Tech Stack */}
+      <CardFooter className='flex items-start flex-col p-4 pt-0'>
+
+     <h2 className="text-xs text-foreground/80 uppercase tracking-wide mb-2">Tech-stack</h2>
+        <div className="flex justify-between w-full">
+  
+    <div className="flex gap-3">
+        {project.tech.map((tech, techIdx) => (
+          <Tooltip key={techIdx}>
+        <TooltipTrigger>
+           <div className="size-6 hover:scale-110 transition-all duration-300 hover:cursor-pointer">
+        {tech.icon}
+          </div>
+          </TooltipTrigger>
+         <TooltipContent>
+        <p className="font-bold">{tech.name}</p>
+      </TooltipContent>
+        </Tooltip>
+        ))}
+
+        </div>
+
+        
+          <div
+            className={`flex items-center gap-1 rounded-md px-2 py-1 text-xs ${
+              project.completed
+                ? 'border-green-300 bg-green-500/10'
+                : 'border-red-300 bg-red-500/10'
+            }`}
+          >
+            {project.completed ? (
+              <>
+                <div className="size-2 animate-pulse rounded-full bg-green-500" />
+                Completed
+              </>
+            ) : (
+              <>
+                <div className="size-2 animate-pulse rounded-full bg-red-500" />
+                In Progress
+              </>
+            )}
           </div>
 
         </div>
