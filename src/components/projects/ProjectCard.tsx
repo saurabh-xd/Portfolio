@@ -21,7 +21,7 @@ interface Project {
   description: string;
   image: string;
   github: string;
-  live: string;
+  live?: string;
   tech: { name: string; icon: React.ReactNode }[];
    tags?: string[];
   completedOn?: string;
@@ -72,7 +72,9 @@ function ProjectCard({ project, index }: ProjectCardProps ) {
 
 {project.completed   && (      <div className='flex gap-3 items-center'>
 
-        <Tooltip>
+{project.live && (
+    
+     <Tooltip>
           <TooltipTrigger>
         <Link 
           href={project.live}
@@ -89,6 +91,8 @@ function ProjectCard({ project, index }: ProjectCardProps ) {
         <p className="font-bold">Live Preview</p>
       </TooltipContent>
         </Tooltip>
+)}
+       
 
 
         <Tooltip>

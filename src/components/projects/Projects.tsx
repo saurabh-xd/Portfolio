@@ -16,6 +16,9 @@ import { projects } from '@/data/project';
 
 
 function Projects() {
+
+    const featuredProjects = projects.slice(0, 4);
+
   return (
    <section className='py-18'>
 
@@ -30,7 +33,7 @@ function Projects() {
       <div className='grid md:grid-cols-2 grid-cols-1 gap-10'>
 
         {
-          projects.map((project,idx)=>(
+          featuredProjects.map((project,idx)=>(
 
             <ProjectCard key={project.name} index={idx} project={project}/> 
 

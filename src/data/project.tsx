@@ -8,6 +8,8 @@ import Shadcn from "@/components/icons/devIcons/ShadcnIcon";
 import SocketIo from "@/components/icons/devIcons/Socket";
 import TailwindCss from "@/components/icons/devIcons/TailwindIcon";
 import TypeScript from "@/components/icons/devIcons/TypScriptIcon";
+import Html from "@/components/icons/devIcons/Html";
+import Css from "@/components/icons/devIcons/Css";
 
 export interface TechStack {
   name: string;
@@ -104,5 +106,35 @@ export const projects = [
       { name: "Shadcn", icon: <Shadcn /> },
     ],
     completed: false,
+  },
+  {
+    name: "React-Projects",
+    description:
+      "A collection of React projects made while learning core concepts like components, hooks, and UI patterns ",
+    image: "/projects/react-js.jpg",
+    github: "https://github.com/saurabh-xd/react-projects",
+    completedOn: "October 2024",
+    tags: ["React js"],
+    tech: [
+    { name: "React", icon: <ReactIcon /> },
+    { name: "JavaScript", icon: <JavaScript /> },
+    { name: "Tailwind CSS", icon: <TailwindCss /> },
+  ],
+    completed: true,
+  },
+  {
+    name: "Javascript-Projects",
+    description:
+      "A set of JavaScript mini-projects made while learning fundamentals, logic building, and DOM manipulation",
+    image: "/projects/javascript.png",
+    github: "https://github.com/saurabh-xd/Javascript-Projects",
+    completedOn: "October 2024",
+    tags: ["Javascript"],
+    tech: [
+    { name: "HTML", icon: <Html/> },
+    { name: "CSS", icon: <Css /> },
+    { name: "JavaScript", icon: <JavaScript /> },
+  ],
+    completed: true,
   },
 ];
