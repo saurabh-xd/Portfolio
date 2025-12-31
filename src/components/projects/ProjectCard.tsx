@@ -141,11 +141,11 @@ function ProjectCard({ project, index }: ProjectCardProps ) {
      <h2 className="text-xs text-foreground/80 uppercase tracking-wide mb-2">Tech-stack</h2>
         <div className="flex justify-between w-full">
   
-    <div className="flex gap-3">
+    <div className="flex flex-wrap gap-2">
         {project.tech.map((tech, techIdx) => (
           <Tooltip key={techIdx}>
         <TooltipTrigger>
-           <div className="size-6 hover:scale-110 transition-all duration-300 hover:cursor-pointer">
+           <div className="md:size-6 size-5 hover:scale-110 transition-all duration-300 hover:cursor-pointer">
         {tech.icon}
           </div>
           </TooltipTrigger>

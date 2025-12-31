@@ -9,7 +9,7 @@ export default function Home() {
   return (
    
 
-      <Container className=" p-4 md:pt-20 md:pb-10  min-h-screen">
+      <Container className="px-6 md:pt-20 md:pb-10  min-h-screen">
        <About/>
        <Projects/>
        <GithubGraph/>

@@ -114,7 +114,7 @@ export const projects = [
     image: "/projects/react-js.jpg",
     github: "https://github.com/saurabh-xd/react-projects",
     completedOn: "October 2024",
-    tags: ["React js"],
+    tags: ["Frontend"],
     tech: [
     { name: "React", icon: <ReactIcon /> },
     { name: "JavaScript", icon: <JavaScript /> },
@@ -129,7 +129,7 @@ export const projects = [
     image: "/projects/javascript.png",
     github: "https://github.com/saurabh-xd/Javascript-Projects",
     completedOn: "October 2024",
-    tags: ["Javascript"],
+    tags: ["Frontend"],
     tech: [
     { name: "HTML", icon: <Html/> },
     { name: "CSS", icon: <Css /> },

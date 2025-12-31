@@ -29,7 +29,7 @@ async function BlogsPage() {
   };
   
   return (
-    <div className='min-h-screen  py-24'>
+    <div className='min-h-screen  py-24 px-6'>
         <Container >
 
           <div className='space-y-3 mb-12 text-center'>

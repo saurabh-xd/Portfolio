@@ -30,16 +30,16 @@ const [activeCategory, setActiveCategory] = useState('All');
 
   return (
     <div>
-         <Container className='py-24'>
+         <Container className='py-24 px-6'>
    
-      <div className=' max-w-md mx-auto py-2 flex flex-col items-center justify-center gap-2  rounded-md mb-8 '>
+      <div className=' max-w-md mx-auto py-2 flex flex-col items-center justify-center gap-2  rounded-md mb-12 '>
         <h2 className='text-4xl font-bold '>Projects</h2>
-        <p className='text-lg font-semibold text-neutral-400'>Things I’ve Shipped & Cooked</p>
+        <p className='text-sm font-semibold text-neutral-400'>Stuff I’ve cooked, shipped, and learned from.</p>
       </div>
 
 
   {/*  Categories */}
-      <div className="flex justify-center gap-3 flex-wrap mb-12">
+      <div className="flex justify-center gap-3 flex-wrap mb-8">
         {categories.map(category => (
           <button
             key={category.value}
@@ -60,7 +60,7 @@ const [activeCategory, setActiveCategory] = useState('All');
       </div>
 
 
-      <div className='grid grid-cols-2 gap-6'>
+      <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
 
         {
           filteredProjects.map((project,idx)=>(

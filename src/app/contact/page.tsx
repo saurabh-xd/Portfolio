@@ -5,7 +5,7 @@ import React from 'react'
 
 function page() {
   return (
-    <div className='flex min-h-screen  items-center justify-center py-24'>
+    <div className='flex min-h-screen  items-center justify-center py-24 px-6'>
          <Container className='w-full max-w-2xl px-4'>
 
           <div className='mb-8 flex flex-col  items-center justify-center'>
