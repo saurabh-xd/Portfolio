@@ -7,22 +7,24 @@ import { GithubIcon } from '../icons/GithubIcon'
 
 function Footer() {
   return (
-    <Container className='flex justify-between   py-6 border-t border-border '>
+    <Container className=' px-4    '>
     
+    <div className='border-t border-border py-8 flex justify-between'>
     <p className='text-xs text-neutral-500'>Designed & Developed by <span className="font-medium text-neutral-400/90">Saurabh.</span></p>
-    <div className='flex items-center justify-center gap-4'>
+    <div className='flex items-center justify-center gap-5'>
         <Link href="https://x.com/_saurabh__xd">
-        <XIcon className='size-4 text-neutral-500 hover:text-neutral-200'/>
+        <XIcon className='size-4 text-neutral-500 hover:text-neutral-200 transition-colors'/>
         </Link>
 
         <Link href="https://www.linkedin.com/in/saurabh-garkoti-784191322/">
-        <LinkedInIcon className='size-4 text-neutral-500 hover:text-neutral-200' />
+        <LinkedInIcon className='size-4 text-neutral-500 hover:text-neutral-200 transition-colors' />
         </Link>
 
         <Link href="https://github.com/saurabh-xd">
-        <GithubIcon className='size-4 text-neutral-500 hover:text-neutral-200' />
+        <GithubIcon className='size-4 text-neutral-500 hover:text-neutral-200 transition-colors' />
         </Link>
 
+    </div>
     </div>
 
     </Container>

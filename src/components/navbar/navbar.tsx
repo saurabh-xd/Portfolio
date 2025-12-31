@@ -4,13 +4,9 @@ import Container from '../common/Container'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { useTheme } from 'next-themes'
-import { useSound } from '@/hooks/useSound'
 import Themetoggle from './theme-toggle'
 
 function Navbar() {
-
-
 
    const navData = [
     // { title: "About", href: "/about" },
@@ -35,8 +31,12 @@ useEffect(() => {
   const y = useTransform(scrollY, [0, 100], [0, 10]);
   const width = useTransform(scrollY,
      [0,100],
-     isMobile ? ["100%", "80%"] : ["60%", "50%"]);
+     isMobile ? ["100%", "80%"] : ["60%", "45%"]);
 
+  // Add image size transform
+  const imageSize = useTransform(scrollY,
+     [0, 100],
+     isMobile ? [40, 32] : [69, 50]);
 
   useMotionValueEvent(scrollY, "change", (latest)=>{
    if(latest>20){
@@ -64,10 +64,24 @@ useEffect(() => {
      className='fixed inset-x-0 top-0 z-50 max-w-full md:max-w-[885px] mx-auto flex items-center justify-between rounded-full bg-background/40 md:py-2 py-1 md:px-3 px-2 backdrop-blur-sm'>
 
       <Link href='/' >
-      <Image
-      className='md:size-16 size-10 rounded-full object-cover'
-      src="/avatar.jpg"  width="100" height="100" alt='avatar' />
-
+      <motion.div
+        style={{
+          width: imageSize,
+          height: imageSize,
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "linear"
+        }}
+      >
+        <Image
+          className='w-full h-full rounded-full object-cover'
+          src="/avatar.jpg"
+          width="100"
+          height="100"
+          alt='avatar'
+        />
+      </motion.div>
     </Link>
 
 
