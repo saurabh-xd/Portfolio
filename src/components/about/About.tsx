@@ -22,7 +22,7 @@ function About() {
           </h1>
   
         
-          <div className='select-none md:px-3 md:py-1.5 px-1.5 py-0.5 border border-green-500/50 bg-green-500/10 text-green-600 dark:text-green-400 rounded-full flex items-center gap-1 w-fit'>
+          <div className='select-none md:px-3 md:py-1.5 px-1.5 py-1 border border-green-500/50 bg-green-500/10 text-green-600 dark:text-green-400 rounded-full flex items-center gap-1 w-fit h-fit'>
             <Circle className="md:size-2 size-1.5 fill-green-500 animate-pulse" />
             <span className='font-medium md:text-xs text-[10px]'>Open to work</span>
           </div>
@@ -36,7 +36,7 @@ function About() {
           <p className='text-muted-foreground leading-relaxed text-base md:text-lg'>
             I'm a <span className='text-foreground/80 font-medium'>full-stack developer</span> who loves coding, tech, and science. 
             I build clean, modern applications using{' '}
-            <span className='text-foreground/80 font-medium'>TypeScript, React, Next.js, Node.js,</span> and{' '}
+            <span className='text-foreground/80 font-medium'>TypeScript, React, Next.js, ,</span> and{' '}
             <span className='text-foreground/80 font-medium'>Express.js.</span>
             
           </p>
@@ -53,7 +53,7 @@ function About() {
 
       <div className='mt-4 flex justify-start gap-4'>
 
-<Link href="https://cal.com">
+<Link href="https://cal.com/saurabh-garkoti-oqktbd/30min" target='_blank'>
        <Button variant="outline">
         <CalendarClock />
         Book a meet
