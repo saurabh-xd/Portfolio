@@ -49,13 +49,12 @@ function ProjectCard({ project, index }: ProjectCardProps ) {
         }}
         viewport={{once: true}}
 
-        className='relative w-full md:h-60 h-48 overflow-hidden '>
+        className='relative w-full md:h-60 h-48 overflow-hidden  '>
           <Image 
             src={project.image} 
             alt={`${project.name} screenshot`}
-             width={1920}
-            height={1080}
-            className='w-full h-full object-cover'
+            fill
+            className='w-full h-full object-cover object-center'
 
           />
         </motion.div>
