@@ -18,6 +18,7 @@ import TailwindCss from "@/components/icons/devIcons/TailwindIcon";
 import TypeScript from "@/components/icons/devIcons/TypScriptIcon";
 import Vercel from "@/components/icons/devIcons/Vercel";
 import Vscode from "@/components/icons/devIcons/Vscode";
+import { GithubIcon } from "@/components/icons/GithubIcon";
 
 export const skillCategories = [
 
@@ -48,6 +49,7 @@ export const skillCategories = [
     title: 'Tools & Platforms',
     skills: [
       { name: 'Git', icon: <Git /> },
+      { name: 'GitHub', icon: <GithubIcon /> },
       { name: 'VS Code', icon: <Vscode /> },
       { name: 'Postman', icon: <Postman /> },
       { name: 'Vercel', icon: <Vercel /> },
