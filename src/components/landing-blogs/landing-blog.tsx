@@ -10,14 +10,14 @@ async function LandingBlog() {
 
   return (
     
-<Container >
+<Container className='my-10'>
 
 
 
     <h2 className='text-2xl md:text-4xl font-semibold'>Blogs</h2>
          <BlogList/>
 
-            <div className="mt-8 flex justify-center">
+            <div className="mt-3 flex justify-center">
         <Button variant="outline">
           <Link href="/blog">Show all blogs</Link>
         </Button>

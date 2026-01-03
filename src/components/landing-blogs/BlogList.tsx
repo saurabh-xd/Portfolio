@@ -35,7 +35,7 @@ async function BlogList() {
                    className='block group' >
 
                      <article className='p-4 rounded-lg border border-primary/10  transition-all duration-200'>
-                        <div className='flex items-start justify-between gap-4 mb-2'>
+                        <div className='flex items-start justify-between gap-4 mb-1'>
                             <h2 className='text-xl md:text-xl font-semibold tracking-tight text-primary group-hover:text-primary/80 transition-colors'>
                                 {blog.title}
                             </h2>
@@ -44,11 +44,11 @@ async function BlogList() {
                             </time>
                         </div>
                         
-                        <p className='text-primary/70 leading-relaxed text-sm'>
+                        <p className='text-primary/60 leading-relaxed text-sm'>
                             {truncate(blog.description || "", 180)}
                         </p>
                         
-                        <span className=' mt-4 text-xs font-medium text-primary/60 group-hover:text-primary transition-colors flex items-center  gap-1'>
+                        <span className=' mt-4 text-xs font-medium text-primary/70 group-hover:text-primary transition-colors flex items-center  gap-1'>
                             Read more <ArrowRight className='size-4' />
                         </span>
                     </article>

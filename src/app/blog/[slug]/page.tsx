@@ -40,8 +40,8 @@ async function SingleBlogPage({
   const { content, frontmatter } = blog;
 
   return (
-    <div className="min-h-screen flex items-start justify-start pt-24">
-      <Container className="py-20">
+    <div className="min-h-screen flex items-start justify-start pt-10">
+      <Container className="py-20  px-6">
 
         { frontmatter.image && (
            <Image
@@ -49,13 +49,13 @@ async function SingleBlogPage({
           alt={frontmatter.title}
           width={800}
           height={400}
-          className="w-full h-auto max-w-3xl rounded-lg mx-auto mb-12 shadow-2xl object-cover"
+          className="w-full h-auto max-w-4xl rounded-lg mx-auto mb-12 shadow-2xl object-cover"
         />
         )
        
 }
 
-        <article className="prose prose-lg dark:prose-invert mx-auto max-w-3xl">
+        <article className="prose prose-lg dark:prose-invert mx-auto max-w-4xl ">
           {content}
         </article>
       </Container>
