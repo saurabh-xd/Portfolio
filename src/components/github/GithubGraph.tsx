@@ -16,10 +16,10 @@ function GithubGraph() {
   }, []);
 
   return (
-    <section className="mt-10 ">
+    <section className="mt-22 ">
       <Container>
-        <div className="flex items-center justify-center mb-6">
-          <h2 className="md:text-3xl text-2xl font-semibold tracking-tight">
+        <div className="flex items-center justify-start mb-6">
+          <h2 className="md:text-4xl text-2xl font-semibold tracking-tight">
             GitHub Activity
           </h2>
         </div>

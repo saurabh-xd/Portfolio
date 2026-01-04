@@ -5,7 +5,7 @@ import { skillCategories } from '@/data/skillsdata'
 
 function Skills() {
   return (
-    <section className='my-18'>
+    <section className='mt-18'>
        
             <h2 className='text-2xl md:text-4xl font-bold'>Skills & Tools</h2>
 

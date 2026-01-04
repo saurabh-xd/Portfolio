@@ -20,7 +20,7 @@ function Projects() {
     const featuredProjects = projects.slice(0, 4);
 
   return (
-   <section className='py-18'>
+   <section className='mt-18'>
 
     <Container>
    

@@ -13,10 +13,12 @@ import { Space_Grotesk } from 'next/font/google'
 import OnekoCat from "@/components/common/oneko";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://saurabh-garkoti.vercel.app"), 
+
   title: "Saurabh",
   description: "Full-stack web Developer building modern web experiences",
    openGraph: {
-    title: "Saurabh",
+    title: "Saurabh Garkoti",
     description: "Full-stack web Developer building modern web experiences",
     url: "https://saurabh-garkoti.vercel.app/",
     siteName: "Saurabh Portfolio",
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Saurabh",
+    title: "Saurabh Garkoti",
     description: "Full-stack web Developer building modern web experiences",
     images: ["/avatar.jpg"],
   },

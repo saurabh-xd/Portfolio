@@ -34,7 +34,7 @@ const [activeCategory, setActiveCategory] = useState('All');
    
       <div className=' max-w-md mx-auto py-2 flex flex-col items-center justify-center gap-2  rounded-md mb-12 '>
         <h2 className='text-4xl font-bold '>Projects</h2>
-        <p className='text-sm font-semibold text-neutral-400'>Stuff I’ve cooked, shipped, and learned from.</p>
+        <p className='text-sm font-semibold text-muted-foreground'>Stuff I’ve cooked, shipped, and learned from.</p>
       </div>
 
 

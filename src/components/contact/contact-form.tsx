@@ -151,7 +151,7 @@ const Contactform = () => {
             <FormItem>
               <FormLabel className="text-sm font-medium">Phone </FormLabel>
               <FormControl>
-                <Input type="tel" placeholder="phone" {...field} 
+                <Input type="tel" placeholder="Phone No" {...field} 
                 className="md:h-16 h-12 px-3 md:placeholder:text-base text-sm"
                 disabled={isSubmitting}/>
               </FormControl>
