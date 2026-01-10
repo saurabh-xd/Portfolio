@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Saurabh Garkoti",
     description: "Full-stack web Developer building modern web experiences",
     url: "https://saurabh-garkoti.vercel.app/",
-    siteName: "Saurabh Portfolio",
+    siteName: "Saurabh ",
     images: [
       {
         url: "/og.png",

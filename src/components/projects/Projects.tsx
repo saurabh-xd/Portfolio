@@ -1,10 +1,5 @@
-import React from 'react'
-
-import Image from 'next/image';
-import { Globe } from 'lucide-react';
 import Link from 'next/link';
 import Container from '../common/Container';
-import { GithubIcon } from '../icons/GithubIcon';
 import ProjectCard from './ProjectCard';
 
 
