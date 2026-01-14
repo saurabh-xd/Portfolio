@@ -6,18 +6,15 @@ import { ThemeProvider } from "@/components/common/theme-provider";
 import Footer from "@/components/footer/Footer";
 import { Toaster } from "@/components/ui/sonner";
 
-
-
-
-import { Space_Grotesk } from 'next/font/google'
+import { Space_Grotesk } from "next/font/google";
 import OnekoCat from "@/components/common/oneko";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://saurabh-garkoti.vercel.app"), 
+  metadataBase: new URL("https://saurabh-garkoti.vercel.app"),
 
   title: "Saurabh",
   description: "Full-stack web Developer building modern web experiences",
-   openGraph: {
+  openGraph: {
     title: "Saurabh Garkoti",
     description: "Full-stack web Developer building modern web experiences",
     url: "https://saurabh-garkoti.vercel.app/",
@@ -41,11 +38,10 @@ export const metadata: Metadata = {
   },
 };
 
-
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ['latin'],
-  variable: '--font-space-grotesk',
-})
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+});
 
 export default function RootLayout({
   children,
@@ -53,25 +49,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-   
-     <html lang="en" suppressHydrationWarning>
-      <body 
+    <html lang="en" suppressHydrationWarning>
+      <body
         className={`${spaceGrotesk.className}  antialiased bg-background dark:bg-background`}
       >
-         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-        <Navbar/>
-        {children}
-        <OnekoCat/>
-        <Footer/>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+          <OnekoCat />
+          <Footer />
         </ThemeProvider>
-          <Toaster />
+        <Toaster />
       </body>
     </html>
- 
   );
 }

@@ -1,55 +1,34 @@
-import Link from 'next/link';
-import Container from '../common/Container';
-import ProjectCard from './ProjectCard';
+import Link from "next/link";
+import Container from "../common/Container";
+import ProjectCard from "./ProjectCard";
 
-
-import { Button } from '../ui/button';
-import { projects } from '@/data/project';
-
-
- 
-
+import { Button } from "../ui/button";
+import { projects } from "@/data/project";
 
 function Projects() {
-
-    const featuredProjects = projects.slice(0, 4);
+  const featuredProjects = projects.slice(0, 4);
 
   return (
-   <section className='mt-18'>
+    <section className="mt-18">
+      <Container>
+        <div className="  mb-6 ">
+          <h2 className="text-2xl md:text-4xl font-bold ">Projects</h2>
+        </div>
 
-    <Container>
-   
-      <div className='  mb-6 '>
-        <h2 className='text-2xl md:text-4xl font-bold '>Projects</h2>
-       
-      </div>
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
+          {featuredProjects.map((project, idx) => (
+            <ProjectCard key={project.name} index={idx} project={project} />
+          ))}
+        </div>
 
-
-      <div className='grid md:grid-cols-2 grid-cols-1 gap-10'>
-
-        {
-          featuredProjects.map((project,idx)=>(
-
-            <ProjectCard key={project.name} index={idx} project={project}/> 
-
-
-          ))
-
-
-
-        }
-
-      </div>
-
-       <div className="mt-8 flex justify-center">
-        <Button variant="outline">
-          <Link href="/projects">Show all projects</Link>
-        </Button>
-      </div>
-
-</Container>
-   </section>
-  )
+        <div className="mt-8 flex justify-center">
+          <Button variant="outline">
+            <Link href="/projects">Show all projects</Link>
+          </Button>
+        </div>
+      </Container>
+    </section>
+  );
 }
 
-export default Projects
+export default Projects;

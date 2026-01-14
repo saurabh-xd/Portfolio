@@ -1,6 +1,6 @@
-import About from '@/components/about/About'
+
 import Container from '@/components/common/Container'
-import React from 'react'
+
 
 function page() {
   return (
