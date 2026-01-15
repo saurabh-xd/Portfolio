@@ -9,7 +9,9 @@ import NextJs from "@/components/icons/devIcons/NextIcon";
 import NodeJs from "@/components/icons/devIcons/NodejsIcon";
 import Notion from "@/components/icons/devIcons/Notion";
 import Npm from "@/components/icons/devIcons/Npm";
+import PostgreSQL from "@/components/icons/devIcons/PostgreSQL";
 import Postman from "@/components/icons/devIcons/Postman";
+import Prisma from "@/components/icons/devIcons/Prisma";
 import ReactIcon from "@/components/icons/devIcons/ReactIcon";
 import Redux from "@/components/icons/devIcons/Redux";
 import Shadcn from "@/components/icons/devIcons/ShadcnIcon";
@@ -42,6 +44,8 @@ export const skillCategories = [
       { name: 'Express.js', icon: <ExpressJs /> },
       { name: 'MongoDB', icon: <MongoDB /> },
       { name: 'Mongoose', icon: <MongooseIcon /> },
+      { name: 'PostgreSQL', icon: <PostgreSQL /> },
+      { name: 'Prisma', icon: <Prisma /> },
       { name: 'Socket.io', icon: <SocketIo /> },
     ]
   },
