@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import { ThemeProvider } from "@/components/common/theme-provider";
@@ -61,6 +61,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Analytics/>
           <OnekoCat />
           <Footer />
         </ThemeProvider>
