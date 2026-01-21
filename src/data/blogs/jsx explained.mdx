@@ -1,0 +1,141 @@
+---
+title: "JSX Explained"
+description: "How React Lets You Write UI Like Magic"
+image: "/blogs/jsx.png"
+date: "2026-01-21"
+---
+
+When I first started learning React, one thing felt very strange:
+
+> "Why am I writing HTML inside JavaScript?"
+
+It looked weird. It felt wrong. But once I understood it, I realized this is actually **one of the biggest superpowers of React**.
+
+That "HTML inside JavaScript" is called **JSX**.
+
+---
+
+##  What is JSX?
+
+JSX stands for **JavaScript XML**.
+
+It lets you write HTML like code directly within JavaScript like this:
+
+```jsx
+const Button = () => {
+  return <button>Click me</button>;
+};
+```
+
+This is not HTML.
+
+This is JavaScript that looks like HTML.
+
+Behind the scenes, React converts this into normal JavaScript function calls.
+
+---
+
+##  The Old Way (Before React)
+
+Earlier, we used to write:
+
+- HTML in one file
+- JavaScript in another file
+- And connect them using IDs and DOM methods
+
+Some problems with this approach:
+
+- UI and logic were separated
+- Code was hard to maintain
+- Changing UI based on data was messy
+
+---
+
+##  The React Way
+
+In React, you write UI and logic together in components:
+
+```jsx
+function Profile({ name }) {
+  return <h1>Hello {name}</h1>;
+}
+```
+
+Now:
+
+- UI depends directly on data
+- No manual DOM updates
+- Everything is component-based
+
+---
+
+##  Why JSX Feels Like Magic
+
+### 1. You can use JavaScript inside UI
+
+```jsx
+<h1>Hello {user.name}</h1>
+{isLoggedIn ? <Dashboard /> : <Login />}
+```
+
+UI becomes dynamic and smart.
+
+### 2. UI becomes just JavaScript
+
+You can:
+
+- Store components in variables
+- Pass them as props
+- Return them from functions
+
+This makes your UI composable and reusable.
+
+### 3. Logic and UI stay together (which is actually good)
+
+In real life:
+
+- UI changes because of logic
+- Logic exists because of UI
+
+So keeping them together in one file makes code easier to understand and maintain.
+
+
+---
+
+## ⚙️ But How Does the Browser Understand JSX?
+
+The browser does not understand JSX.
+
+Tools like:
+
+- Babel
+- Next.js
+- Vite
+
+convert this:
+
+```jsx
+<h1>Hello</h1>
+```
+
+into:
+
+```javascript
+React.createElement("h1", null, "Hello");
+```
+
+So JSX is just a developer-friendly syntax.
+
+---
+
+To get more information about JSX: [https://react.dev/learn/writing-markup-with-jsx](https://react.dev/learn/writing-markup-with-jsx)
+
+
+
+
+
+
+
+
+
+
