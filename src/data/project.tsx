@@ -94,7 +94,7 @@ export const projects = [
       "A platform where developers can upload their projects, explore others' work, and leave reviews. ",
     image: "/projects/projectfolio.jpg",
     github: "https://github.com/saurabh-xd/projectfolio",
-    live: "https://projectfolio.vercel.app",
+    live: "https://projectfolio.saurabhx.me/",
     completedOn: "October 2024",
     tags: ["Full Stack", "Platform"],
     tech: [
@@ -105,7 +105,7 @@ export const projects = [
       { name: "Mongodb", icon: <MongoDB /> },
       { name: "Shadcn", icon: <Shadcn /> },
     ],
-    completed: false,
+    completed: true,
   },
   {
     name: "React-Projects",

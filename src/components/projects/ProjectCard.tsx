@@ -18,7 +18,7 @@ interface Project {
   name: string;
   description: string;
   image: string;
-  github: string;
+  github?: string;
   live?: string;
   tech: { name: string; icon: React.ReactNode }[];
   tags?: string[];
@@ -85,6 +85,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                 </Tooltip>
               )}
 
+{project.github && (
               <Tooltip>
                 <TooltipTrigger>
                   <Link
@@ -101,6 +102,8 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                   <p className="font-bold">Github</p>
                 </TooltipContent>
               </Tooltip>
+
+)}
             </div>
           )}
         </div>
