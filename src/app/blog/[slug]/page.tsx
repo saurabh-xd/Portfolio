@@ -48,7 +48,7 @@ async function SingleBlogPage({
             alt={frontmatter.title}
             width={800}
             height={400}
-            className="w-full h-auto max-w-4xl rounded-lg mx-auto mb-12 shadow-2xl object-cover"
+            className="w-full h-120  max-w-4xl rounded-lg mx-auto mb-12 shadow-2xl object-cover"
           />
         )}
 
