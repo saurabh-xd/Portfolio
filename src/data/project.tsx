@@ -10,6 +10,7 @@ import TailwindCss from "@/components/icons/devIcons/TailwindIcon";
 import TypeScript from "@/components/icons/devIcons/TypScriptIcon";
 import Html from "@/components/icons/devIcons/Html";
 import Css from "@/components/icons/devIcons/Css";
+import PostgreSQL from "@/components/icons/devIcons/PostgreSQL";
 
 export interface TechStack {
   name: string;
@@ -25,11 +26,9 @@ export interface Project {
   completedOn: string;
   tags: string[];
   tech: TechStack[];
-  
 }
 
 export const projects = [
- 
   {
     name: "TypeZen",
     description:
@@ -38,11 +37,11 @@ export const projects = [
     github: "https://github.com/saurabh-xd/typezen",
     live: "https://typezen-tau.vercel.app/",
     completedOn: "August 2024",
-    tags: [ "Frontend", "Landing Page"],
+    tags: ["Frontend", "Landing Page"],
     tech: [
       { name: "Next.js", icon: <NextJs /> },
       { name: "React", icon: <ReactIcon /> },
-       { name: "Typescript", icon: <TypeScript /> },
+      { name: "Typescript", icon: <TypeScript /> },
       { name: "Tailwind CSS", icon: <TailwindCss /> },
     ],
     completed: true,
@@ -68,26 +67,6 @@ export const projects = [
     completed: true,
   },
 
-  
-
-   {
-    name: "LearnMusic",
-    description:
-      "A modern music course landing page built with Next.js, TypeScript, Tailwind CSS, and Aceternity UI",
-    image: "/projects/chatbot.jpg",
-    github: "https://github.com/saurabh-xd/LearnMusic",
-    live: "https://learn-music-school.vercel.app/",
-    completedOn: "June 2024",
-    tags: ["Landing page", "Frontend"],
-     tech: [
-      { name: "Next.js", icon: <NextJs /> },
-      { name: "React", icon: <ReactIcon /> },
-       { name: "Typescript", icon: <TypeScript /> },
-      { name: "Tailwind CSS", icon: <TailwindCss /> },
-    ],
-    completed: true,
-  },
-
   {
     name: "ProjectFolio",
     description:
@@ -107,6 +86,44 @@ export const projects = [
     ],
     completed: true,
   },
+
+  {
+    name: "TLDRify AI",
+    description:
+      "A platform where developers can upload their projects, explore others' work, and leave reviews. ",
+    image: "/projects/tldr.jpg",
+    github: "https://github.com/saurabh-xd/projectfolio",
+    live: "https://projectfolio.saurabhx.me/",
+    completedOn: "October 2024",
+    tags: ["Full Stack", "Platform"],
+    tech: [
+      { name: "Next.js", icon: <NextJs /> },
+      { name: "React", icon: <ReactIcon /> },
+      { name: "Typescript", icon: <TypeScript /> },
+      { name: "Tailwind CSS", icon: <TailwindCss /> },
+      { name: "PostgreSQL", icon: <PostgreSQL /> },
+      { name: "Shadcn", icon: <Shadcn /> },
+    ],
+    completed: false,
+  },
+
+  {
+    name: "LearnMusic",
+    description:
+      "A modern music course landing page built with Next.js, TypeScript, Tailwind CSS, and Aceternity UI",
+    image: "/projects/chatbot.jpg",
+    github: "https://github.com/saurabh-xd/LearnMusic",
+    live: "https://learn-music-school.vercel.app/",
+    completedOn: "June 2024",
+    tags: ["Landing page", "Frontend"],
+    tech: [
+      { name: "Next.js", icon: <NextJs /> },
+      { name: "React", icon: <ReactIcon /> },
+      { name: "Typescript", icon: <TypeScript /> },
+      { name: "Tailwind CSS", icon: <TailwindCss /> },
+    ],
+    completed: true,
+  },
   {
     name: "React-Projects",
     description:
@@ -116,10 +133,10 @@ export const projects = [
     completedOn: "October 2024",
     tags: ["Frontend"],
     tech: [
-    { name: "React", icon: <ReactIcon /> },
-    { name: "JavaScript", icon: <JavaScript /> },
-    { name: "Tailwind CSS", icon: <TailwindCss /> },
-  ],
+      { name: "React", icon: <ReactIcon /> },
+      { name: "JavaScript", icon: <JavaScript /> },
+      { name: "Tailwind CSS", icon: <TailwindCss /> },
+    ],
     completed: true,
   },
   {
@@ -131,10 +148,10 @@ export const projects = [
     completedOn: "October 2024",
     tags: ["Frontend"],
     tech: [
-    { name: "HTML", icon: <Html/> },
-    { name: "CSS", icon: <Css /> },
-    { name: "JavaScript", icon: <JavaScript /> },
-  ],
+      { name: "HTML", icon: <Html /> },
+      { name: "CSS", icon: <Css /> },
+      { name: "JavaScript", icon: <JavaScript /> },
+    ],
     completed: true,
   },
 ];
