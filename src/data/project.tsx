@@ -11,6 +11,7 @@ import TypeScript from "@/components/icons/devIcons/TypScriptIcon";
 import Html from "@/components/icons/devIcons/Html";
 import Css from "@/components/icons/devIcons/Css";
 import PostgreSQL from "@/components/icons/devIcons/PostgreSQL";
+import Prisma from "@/components/icons/devIcons/Prisma";
 
 export interface TechStack {
   name: string;
@@ -90,9 +91,9 @@ export const projects = [
   {
     name: "TLDRify AI",
     description:
-      "A platform where developers can upload their projects, explore others' work, and leave reviews. ",
+      "summaroze or fix sentences",
     image: "/projects/tldr.jpg",
-    github: "https://github.com/saurabh-xd/projectfolio",
+    github: "https://github.com/saurabh-xd/TLDRify-AI",
     live: "https://projectfolio.saurabhx.me/",
     completedOn: "October 2024",
     tags: ["Full Stack", "Platform"],
@@ -102,7 +103,7 @@ export const projects = [
       { name: "Typescript", icon: <TypeScript /> },
       { name: "Tailwind CSS", icon: <TailwindCss /> },
       { name: "PostgreSQL", icon: <PostgreSQL /> },
-      { name: "Shadcn", icon: <Shadcn /> },
+      { name: "Prisma", icon: <Prisma /> },
     ],
     completed: false,
   },
